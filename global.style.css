@@ -1,0 +1,56 @@
+:root {
+  --text-color: #fff;
+  --background-color: #000;
+  --text-font-family: "JetRegular";
+  --header-font-family: "JetMedium";
+  --sub-header-font-family: "JetThin";
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+nav {
+  position: absolute;
+  width: 100%;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  margin-right: 2em;
+  text-decoration: none;
+  font-size: 0.9em;
+  color: var(--text-color);
+  font-family: var(--sub-header-font-family);
+}
+nav a:hover {
+  font-family: var(--text-font-family);
+}
+nav a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background-color: var(--text-color);
+  transition: all 0.2s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Component Parent Node Styles */
+
+home-page {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh);
+}
