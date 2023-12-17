@@ -40,7 +40,7 @@ const Router = {
 
         } else {
             // 404
-            document.querySelector("main").innerHTML = "Oups, 404!"
+            document.querySelector(".not--found").innerHTML = "Oups, 404!"
 
         }
     }

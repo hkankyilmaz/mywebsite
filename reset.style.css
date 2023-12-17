@@ -11,6 +11,14 @@ ol[class] {
   padding: 0;
 }
 
+.not--found {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "JetMedium";
+}
+
 /* Remove default margin */
 body,
 h1,
