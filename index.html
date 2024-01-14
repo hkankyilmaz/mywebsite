@@ -18,10 +18,10 @@
   </head>
   <body>
     <nav>
-      <a class="navlink" href="/">Home</a>
-      <a class="navlink" href="/about-me">About Me</a>
-      <a class="navlink" href="/reach-me">Reach Me</a>
-      <a class="navlink" href="/resume">Resume</a>
+      <a data-isactive="true" class="navlink" href="/">Home</a>
+      <a data-isactive="false" class="navlink" href="/about-me">About Me</a>
+      <a data-isactive="false" class="navlink" href="/reach-me">Reach Me</a>
+      <a data-isactive="false" class="navlink" href="/resume">Resume</a>
     </nav>
     <template id="homepage__content">
       <h1 class="homepage__me">
@@ -43,8 +43,18 @@
         <a href="" target="_blank"><i class="fa-solid fa-envelope"></i></a>
       </div>
     </template>
-    <template id="homepage__contact--mail"></template>
-    <main></main>
-    <div class="not--found"></div>
+    <template id="aboutme">
+      <div class="aboutme__container">
+        <p class="aboutme__desc">
+          I am a software engineer with a passion for problem-solving and a
+          strong drive for continuous learning. I have experience in various
+          programming languages and frameworks, and I enjoy working on both
+          front-end and back-end development. My goal is to create efficient,
+          scalable, and user-friendly applications that meet the needs of users
+          and businesses.
+        </p>
+      </div>
+    </template>
+    <main class="not-found"></main>
   </body>
 </html>

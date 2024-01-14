@@ -2,6 +2,8 @@
   --text-color: #fff;
   --background-color: #000;
   --text-font-family: "JetRegular";
+  --text-font-family-thin: "JetThin";
+  --text-font-family-extra-thin: "JetExtraLight";
   --header-font-family: "JetMedium";
   --sub-header-font-family: "JetThin";
 }
@@ -10,6 +12,14 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-size: 20px;
+}
+
+main.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh);
 }
 
 nav {
@@ -44,6 +54,10 @@ nav a:hover::after {
   width: 100%;
 }
 
+[data-isactive="true"]::after {
+  width: 100%;
+}
+
 /* Component Parent Node Styles */
 
 home-page {
@@ -53,4 +67,13 @@ home-page {
   align-items: center;
   flex-direction: column;
   height: calc(100vh);
+}
+
+about-me {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: calc(100vh);
+  padding: 200px 200px;
 }

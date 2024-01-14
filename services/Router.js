@@ -16,6 +16,7 @@ const Router = {
 
         // Check the initial URL
         Router.go(location.pathname);
+        console.log("location", location.pathname);
     },
     go: (route, addToHistory = true) => {
         console.log(`Going to ${route}`);
@@ -24,9 +25,13 @@ const Router = {
             history.pushState({ route }, '', route);
         }
         let pageElement = null;
+        console.log("route", route)
         switch (route) {
             case "/":
                 pageElement = document.createElement("home-page");
+                break;
+            case "/about-me":
+                pageElement = document.createElement("about-me");
                 break;
 
         }
@@ -40,7 +45,9 @@ const Router = {
 
         } else {
             // 404
-            document.querySelector(".not--found").innerHTML = "Oups, 404!"
+            console.log("404")
+            document.querySelector("main").classList.toggle = "not-found"
+            document.querySelector("main").innerHTML = "Oups, 404!"
 
         }
     }
