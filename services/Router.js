@@ -37,6 +37,7 @@ const Router = {
         }
         if (pageElement) {
             // document.querySelector("main").children[0].remove();
+            document.querySelector("main").classList.toggle = "not-found"
             const cache = document.querySelector("main");
             cache.innerHTML = "";
             cache.appendChild(pageElement);
