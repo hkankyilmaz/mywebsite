@@ -2,28 +2,26 @@ export class AboutMe extends HTMLElement {
     constructor() {
         super();
 
-
-
-
         this.root = this.attachShadow({ mode: "open" });
-
-        const template = document.getElementById("aboutme");
-        const content = template.content.cloneNode(true);
         const styles = document.createElement("style");
-        loadCSS();
         this.root.appendChild(styles);
-        this.root.appendChild(content);
 
-
-
-
-        async function loadCSS() {
+        // Use a Promise to ensure that CSS is loaded before proceeding
+        const loadCSS = async () => {
             const request = await fetch("/components/AboutMe.css");
             styles.textContent = await request.text();
-        }
+        };
 
+        // Call the loadCSS function and wait for it to complete
+        (async () => {
+            await loadCSS();
+
+            const template = document.getElementById("aboutme");
+            const content = template.content.cloneNode(true);
+
+            this.root.appendChild(content);
+        })();
     }
 }
-
 
 customElements.define("about-me", AboutMe);
