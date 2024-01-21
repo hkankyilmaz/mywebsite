@@ -38,6 +38,9 @@ nav a {
   color: var(--text-color);
   font-family: var(--sub-header-font-family);
 }
+nav a:last-child {
+  margin-right: 0;
+}
 nav a:hover {
   font-family: var(--text-font-family);
 }
