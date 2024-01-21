@@ -2,3 +2,8 @@ p {
   color: var(--text-color);
   font-family: var(--text-font-family-extra-thin);
 }
+@media (max-width: 600px) {
+  p {
+    font-size: 1rem;
+  }
+}
